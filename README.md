@@ -1,5 +1,8 @@
 # react-to-do-list
 
-1. Change directory to 'client' folder
-2. Run ```npm install``` (This will install all neccessary modules)
-3. Run ```npm start``` to start the React App
+Prerequisite: Have npm installed
+
+1. Download the ```client.zip``` and extract it
+2. Open powershell and change directory to 'client' folder
+3. Run ```npm install``` (This will install all neccessary modules)
+4. Run ```npm start``` to start the React App
