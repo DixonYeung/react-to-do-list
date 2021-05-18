@@ -9,4 +9,5 @@ Prerequisite: Have npm installed
 
 Don't want to download and run ? Take a look at the video demo here:
 https://youtu.be/OA8YwF0FzKY
+
 Or browse to the deployed web app here:https://dizzon-web-app-todolist.herokuapp.com/
