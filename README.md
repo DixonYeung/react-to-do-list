@@ -12,6 +12,6 @@ https://dizzon-web-app-todolist.herokuapp.com/
 Prerequisite: Have npm installed
 
 1. Download and extract all files
-2. Open powershell and change directory to 'client' folder
+2. Open powershell and change directory to the downloaded folder
 3. Run ```npm install``` (This will install all neccessary modules)
 4. Run ```npm start``` to start the React App
