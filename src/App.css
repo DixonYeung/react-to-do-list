@@ -1,0 +1,547 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;500;700&display=swap');
+@import url("https://rsms.me/inter/inter.css");
+/* :root {
+  --color-light: white;
+  --color-dark: #212121;
+  --color-signal: #fab700;
+  --color-background: var(--color-light);
+  --color-text: var(--color-dark);
+  --color-accent: var(--color-signal);
+  --size-bezel: .5rem;
+  --size-radius: 4px;
+  line-height: 1.4;
+  font-family: "Inter", sans-serif;
+  font-size: calc(.6rem + .4vw);
+  color: var(--color-text);
+  background: var(--color-background);
+  font-weight: 300;
+  padding: 0 calc(var(--size-bezel) * 3);
+}		/* 
+Explicitly define a Segoe UI font-family so that we can assign Segoe UI 
+Semilight to an appropriate font-weight.
+*/
+@font-face {
+    font-family: "Segoe UI";
+    font-weight: 200;
+    src: local("Segoe UI Light");
+}
+@font-face {
+    font-family: "Segoe UI";
+    font-weight: 300;
+    src: local("Segoe UI Semilight");
+}
+@font-face {
+    font-family: "Segoe UI";
+    font-weight: 400;
+    src: local("Segoe UI");
+}
+@font-face {
+    font-family: "Segoe UI";
+    font-weight: 600;
+    src: local("Segoe UI Semibold");
+}
+@font-face {
+    font-family: "Segoe UI";
+    font-weight: 700;
+    src: local("Segoe UI Bold");
+}
+@font-face {
+    font-family: "Segoe UI";
+    font-style: italic;
+    font-weight: 400;
+    src: local("Segoe UI Italic");
+}
+@font-face {
+    font-family: "Segoe UI";
+    font-style: italic;
+    font-weight: 700;
+    src: local("Segoe UI Bold Italic");
+}
+
+*{
+  font-family: 'Inter';
+  color: rgb(73, 73, 73);
+}
+
+.App {
+  text-align: center;
+}
+
+
+
+/* .card {
+  background: var(--color-background);
+  padding: calc(4 * var(--size-bezel));
+  margin-top: calc(4 * var(--size-bezel));
+  border-radius: var(--size-radius);
+  border: 3px solid var(--color-shadow, currentColor);
+  box-shadow: 0.5rem 0.5rem 0 var(--color-shadow, currentColor);
+} */
+
+
+.form{
+  border-radius: 4px;
+  border: 3px solid rgb(19, 19, 19);
+  box-shadow: 0.5rem 0.5rem 0 rgb(39, 39, 39);
+  /* width: 50%; */
+  background-color: rgba(247, 243, 236, 0.856);
+}
+
+h1{
+  font-family: 'Inter';
+  color: rgb(63, 63, 63);
+  /* font-weight: bolder; */
+}
+
+
+
+
+.fieldName{
+  display: flex;
+  align-items: center;
+  text-align: left;
+  text-transform: capitalize;
+}
+
+
+.form input{
+  height: 2.5rem;
+  font-size: 1rem;
+  padding: 10px;
+  box-sizing: border-box;
+  transition: background-color 150ms ease-out;
+  /* border-width: 1px; */
+  /* border-radius: 4px; */
+  /* border-color: rgb(145, 145, 145); */
+  outline: 0;
+  border-width: 0;
+  border: 1px solid rgb(97, 97, 97);
+  border-radius: 4px;
+}
+.form input::selection{
+  background-color: rgb(255, 182, 123);
+  color: white;
+}
+
+.form input:focus{
+  border: 3px solid rgb(255, 182, 123);
+  /* background-color: rgb(255, 242, 226); */
+  transition: background-color 150ms ease-out;
+  margin-left: -2px;
+  margin-right: -2px;
+}
+
+button{
+  height: 40px;
+  font-size: 1.1rem;
+  font-family: 'Inter';
+  color: rgb(233, 233, 233);
+  background-color: rgb(41, 46, 51);
+  font-weight: 800;
+  border: 0px;
+  border-radius: 0.3rem;
+  transition: background-color 150ms ease-out;
+  margin: 4px 2px 4px 2px;
+}
+button:hover{
+  color: rgb(255, 255, 255);
+  background-color: rgb(243, 140, 56);
+  transition: background-color 200ms ease-out;
+  cursor: pointer;
+}
+
+
+
+
+
+/* Registration Form styles */
+.registration-form{
+  display: grid;
+  max-width: 650px;
+  margin: 0 auto;
+  grid-template-columns: auto min-content auto;
+  grid-gap: 7px;
+  padding: 20px 40px 20px 40px;
+  margin-bottom: 20px;
+}
+.registration-form h1{
+  grid-row: 1 / span 5;
+  display: flex;
+  align-items: center;
+  padding-right: 20px;
+  max-width: 10rem;
+}
+.registration-form button{
+  grid-column: 2 / span 2;
+}
+
+
+
+.go-login{
+  display: inline-block;
+  padding: 10px;
+  border: 0px;
+}
+
+
+
+
+/* Login Form styles */
+.login-form{
+  display: grid;
+  max-width: 350px;
+  margin: 0 auto;
+  grid-template-columns: 100%;
+  grid-gap: 7px;
+  justify-content: center;
+  padding: 20px 10px 20px 10px;
+  margin-bottom: 20px;
+}
+.go-register{
+  display: inline-block;
+  padding: 10px;
+  border: 0px;
+}
+.login-form input{
+}
+
+
+/* Homepage user data panel */
+.grid-container{
+  display: grid;
+  padding-top: 70px;
+  /* grid-column-gap: 50px; */
+  grid-template-columns: auto auto auto auto;
+}
+
+.grid-item{
+  text-align: left;
+}
+
+
+
+/* Browse record */
+.infoPage{
+  display: grid;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+.infoPage h1{
+  margin-left: 20px;
+}
+.infoPage button.logout{
+  width: 5rem;
+  justify-self: flex-end;
+  
+}
+.infoPage button.createRecord{
+  grid-column: 2;
+  justify-self: flex-end;
+  width: 10rem;
+}
+.infoPage button{
+  margin: 20px;
+}
+/* The record grid */
+.consultation-record-container{
+  grid-column: 1 / span 2;
+  display: grid;
+  grid-gap: 1px;
+  grid-template-columns: auto auto auto auto auto auto auto;
+  padding: 1px;
+  background-color: rgb(165, 165, 165);
+  margin: 20px;
+  /* min-width: 1000px; */
+  overflow-x: scroll;
+}
+.consultation-record-item{
+  text-align: left;
+  background-color: white;
+  padding: 5px;
+}
+.consultation-record-container .title{
+  background-color: rgb(247, 217, 212);
+  font-weight: 800;
+  text-transform: capitalize;
+}
+
+
+
+
+/* Create record page */
+.create-record-form{
+  display: grid;
+  grid-template-columns: 30% auto auto;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 20px 40px 40px 40px;
+  grid-gap: 5px;
+}
+.create-record-form h1{
+  grid-column: 1 / span 2 ;
+  text-align: center;
+}
+.create-record-form input{
+  grid-column: 2 / span 2 ;
+}
+.create-record-form button.logout{
+  margin-top: 20px;
+  grid-column: 3;
+  width: 5rem;
+  justify-self: end;
+}
+.create-record-form button.browseRecord{
+  grid-column: 1;
+  margin-top: 20px;
+  width: 5rem;
+}
+.create-record-form button.submit{
+  grid-column: 3;
+  margin-top: 20px;
+}
+
+
+
+
+
+@media screen and (min-width: 720px){
+  
+}
+
+
+@media screen and (max-width: 720px){
+  .registration-form{
+    /* display: grid; */
+    /* max-width: 650px; */
+    /* margin: 0 auto; */
+    grid-template-columns: 30% 70%;
+    grid-gap: 5px;
+    padding: 20px 50px 20px 50px;
+    margin-bottom: 20px;
+  }
+  .registration-form h1{
+    grid-row: unset;
+    grid-column: 1 / span 2;
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+  }
+  .registration-form button{
+    grid-column: 1 / span 2;
+  }
+
+  
+  .create-record-form .fieldName{
+    grid-column: 1 / span 3;
+  }
+  .create-record-form h1{
+    grid-column: 1 / span 2;
+  }
+  .create-record-form input{
+    grid-column: 1 / span 3;
+  }
+  .create-record-form button.browseRecord{
+    grid-column: 3;
+  }
+
+}
+
+@media screen and (max-width: 440px){
+  .registration-form{
+    /* display: grid; */
+    /* max-width: 650px; */
+    /* margin: 0 auto; */
+    grid-template-columns: auto;
+    grid-gap: 5px;
+    padding: 20px 10px 20px 10px;
+    margin-bottom: 20px;
+  }
+  /* .registration-form h1{
+    grid-column: 1 / span 2;
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+  } */
+  .registration-form button{
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 40px;
+  }
+  .registration-form > *{
+    grid-column: 1 / span 2;
+  }
+
+
+  .create-record-form{
+    padding: 20px 10px 20px 10px;
+  }
+  .create-record-form h1{
+    font-size: 1.5rem;
+  }
+  .create-record-form button.logout{
+    margin: 10px;
+  }
+}
+
+
+div.container{
+  
+  margin: 0 auto;
+  
+  
+  /* padding: 20px 40px 20px 40px; */
+  width: 600px;
+  border: 1px solid #dbdbdb;
+  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%), 0 25px 50px 0 rgb(0 0 0 / 10%);
+}
+
+div.container > :nth-child(n){
+  border-bottom: 0.1rem solid #e9e8e8;
+  padding: 10px;
+  align-items: center;
+}
+
+div.tickParent{
+  /* display: grid;
+  grid-template-columns: 70px auto;
+  grid-gap: 1px; */
+  display: flex;
+}
+.crossmark{
+  display: flex;
+  flex-basis: 20px;
+  height: 20px;
+}
+.crossmark:hover{
+  cursor: pointer;
+}
+.crossmark:after{
+  content: '✖';
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  position: relative;
+  left: 1px;
+  bottom: 4px;
+  transition: color 200ms;
+}
+div.tickParent:hover > .crossmark:after{
+  content: '✖';
+  /* font-size: 20px; */
+  font-weight: bold;
+  color: rgb(180, 21, 21);
+  position: relative;
+  left: 1px;
+  bottom: 4px;
+  transition: color 500ms;
+}
+
+
+input.tick:hover{
+  cursor: pointer;
+  border: 1px solid rgb(21, 189, 124);
+}
+
+input.tick{
+  display: flex;
+  min-width: 35px;
+  height: 35px;
+  border-radius: 50% !important;
+  border: 1px solid #e7e7e7;
+  appearance: none;
+  -webkit-appearance: none;
+  transition: border 500ms;
+  margin-left: 10px;
+}
+input.tick:checked{
+  border: 1px solid rgb(21, 189, 124);
+  transition: border 500ms;
+}
+input.tick:after{
+  content: "✓";
+  font-size: 35px;
+  font-weight: bold;
+  color: white;
+  position: relative;
+  left: 1px;
+  bottom: 4px;
+}
+input.tick:checked:after{
+  content: "✓";
+  font-size: 35px;
+  font-weight: bold;
+  color: rgb(21, 189, 124);
+  position: relative;
+  left: 1px;
+  bottom: 4px;
+  transition: color 500ms;
+}
+
+
+
+div.toDoListItem{
+  display: flex;
+  text-align: start;
+  font-size: 20px;
+  font-family: 'Inter';
+  padding: 10px;
+  transition: color 500ms;
+  flex-basis: calc(100% - 45px - 20px);
+}
+input.tick:checked + div.toDoListItem{
+  text-decoration: line-through;
+  color: #adadad;
+  transition: color 500ms;
+}
+
+
+
+.collapse{
+  animation-name: collapse;
+  animation-duration: 500ms;
+  animation-fill-mode: forwards;
+  /* animation-timing-function: ease-out; */
+  padding: 0px !important;
+}
+.show{
+  animation-name: show;
+  animation-duration: 500ms;
+  animation-fill-mode: forwards;
+  /* animation-timing-function: ease-out; */
+  padding: default !important;
+}
+
+@keyframes show{
+  from{
+    opacity:0;
+    max-height: 0px;
+    visibility: collapse;
+  }
+  to{
+    opacity:1;
+    max-height: 40px;
+    visibility: default;
+  }
+}
+@keyframes collapse{
+  from{
+    opacity:1;
+    max-height: 40px;
+    visibility: default;
+  }
+  to{
+    opacity:0;
+    max-height: 0px;
+    visibility: collapse;
+  }
+}
+
+
+.whatToDo{
+  border: 1px solid #e7e7e7;
+  min-height: 40px;
+  margin-right: 10px;
+  width: calc(100% - 3rem);
+  font-size: 1.6rem;
+  padding-left: 10px;
+}
