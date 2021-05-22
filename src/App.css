@@ -387,6 +387,17 @@ button.click{
   .create-record-form button.logout{
     margin: 10px;
   }
+
+  div.container{
+  
+    margin: 0 auto;
+  
+  
+    /* padding: 20px 40px 20px 40px; */
+    width: 100%;
+    border: 1px solid #dbdbdb;
+    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%), 0 25px 50px 0 rgb(0 0 0 / 10%);
+  }
 }
 
 
