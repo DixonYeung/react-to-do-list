@@ -12,8 +12,8 @@ function App() {
     const [newRecord, setNewRecord] = useState('');
 
 
-      const [status, setStatus] = useState(VIEW.SHOWALL);
-
+    const [status, setStatus] = useState(VIEW.SHOWALL);
+    const [activeButton, setActiveButton] = useState();
 
 
     useEffect(() => {
@@ -21,7 +21,7 @@ function App() {
             setRecordList(JSON.parse(localStorage.getItem('todolist_record')));
         }
         else{
-            Axios.get("https://jsonplaceholder.typicode.com/todos").then((response) => {
+            Axios.get("https://dizzon-webapp-server.herokuapp.com/api/todolist").then((response) => {
                 if (response.data.length > 0) {
                     let temp = [];
                     response.data.map((r, i) => {
@@ -77,6 +77,23 @@ function App() {
         setNewRecord('');
     }
 
+    const handleClear = ()=>{
+        let temp = [...recordList];
+        temp.map((data, i) => {
+            data.completed = false;
+        });
+        setRecordList(temp);
+        localStorage.setItem('todolist_record', JSON.stringify(temp));
+        setRecordList(JSON.parse(localStorage.getItem('todolist_record')));
+    }
+
+    const handleButtonClick = (e)=>{
+        if(activeButton){
+            activeButton.classList.remove('click');
+        }
+        e.target.classList.add('click');
+        setActiveButton(e.target);
+    }
     
 
     return <div className="App">
@@ -96,9 +113,10 @@ function App() {
         <div>loading...</div> 
         }
 
-        <button onClick={()=>setStatus(VIEW.SHOWALL)}>All</button>
-        <button onClick={()=>setStatus(VIEW.SHOWACTIVE)}>Active</button>
-        <button onClick={()=>setStatus(VIEW.SHOWCOMPLETED)}>Completed</button>
+        <button onClick={(e)=> { setStatus(VIEW.SHOWALL); handleButtonClick(e); } }>All</button>
+        <button onClick={(e)=> { setStatus(VIEW.SHOWACTIVE); handleButtonClick(e); } }>Active</button>
+        <button onClick={(e)=> { setStatus(VIEW.SHOWCOMPLETED); handleButtonClick(e); } }>Completed</button>
+        <button onClick={(e)=> { handleClear(); handleButtonClick(e); } }>Clear</button>
     </div>
     
     

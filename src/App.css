@@ -149,6 +149,12 @@ button:hover{
   transition: background-color 200ms ease-out;
   cursor: pointer;
 }
+button.click{
+  color: rgb(255, 255, 255);
+  background-color: rgb(243, 140, 56);
+  transition: background-color 200ms ease-out;
+  cursor: pointer;
+}
 
 
 
