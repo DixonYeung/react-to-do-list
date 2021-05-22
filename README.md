@@ -1,7 +1,6 @@
 # Simple to do list web app
 
 Already deployed web app (cloud deployed on DigitalOcean):
-
 https://dizzonwebapp-todolist-6wnm8.ondigitalocean.app/
 
 
