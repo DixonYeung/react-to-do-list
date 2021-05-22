@@ -1,7 +1,7 @@
 # Simple to do list web app
 
-Already deployed web app:
-https://dizzon-webapp-todolist.herokuapp.com/
+Already deployed web app (cloud deployed on DigitalOcean):
+https://dizzonwebapp-todolist-6wnm8.ondigitalocean.app/
 
 
 ### Want to run the app in your own computer?
