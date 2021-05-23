@@ -97,10 +97,10 @@ function App() {
     
 
     return <div className="App">
-        <h1>To do list</h1>
-        { recordList.length > 0 ? 
+        <h1>To do list</h1> 
         <div className="container">
         <div className="tickParent"><input type='text' className='whatToDo' placeholder='what to do ?' onChange={(e)=>handleInputChange(e)} value={newRecord}></input><button onClick={()=>handleAdd()}>Add</button></div>
+        { recordList.length > 0 ?
         {recordList.map((r, i) => {
             return <div className={`tickParent ${status == VIEW.SHOWALL ? ' show' : ''} ${status == VIEW.SHOWACTIVE ? r.completed == false ? ' show' : 'collapse' : ''} ${status == VIEW.SHOWCOMPLETED ? r.completed == true ? ' show' : 'collapse' : ''}`}>
                 <input className="tick" type="checkbox" checked={r.completed} onChange={() => handleChange(i)}></input>
