@@ -1,7 +1,7 @@
 # Simple to do list web app
 
-Already deployed web app (cloud deployed on DigitalOcean):
-https://dizzonwebapp-todolist-6wnm8.ondigitalocean.app/
+Already deployed IPFS web app on FLEEK:
+https://dizzonwebapp-todolist.on.fleek.co/
 
 
 ### Want to run the app in your own computer?
