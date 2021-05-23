@@ -65,12 +65,22 @@ function App() {
 
     const handleAdd = ()=>{
         let temp = [...recordList];
+        if( temp[temp.length - 1].id ){
         temp.push({
             "userId": 1,
             "id": temp[temp.length - 1].id + 1,
             "title": newRecord,
             "completed": false
         });
+        }
+        else{
+            temp.push({
+            "userId": 1,
+            "id": 0,
+            "title": newRecord,
+            "completed": false
+        });
+        }
         setRecordList(temp);
         localStorage.setItem('todolist_record', JSON.stringify(temp));
         setRecordList(JSON.parse(localStorage.getItem('todolist_record')));
