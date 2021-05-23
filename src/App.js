@@ -65,7 +65,7 @@ function App() {
 
     const handleAdd = ()=>{
         let temp = [...recordList];
-        if( temp[temp.length - 1].id ){
+        if( temp.length > 0 ){
         temp.push({
             "userId": 1,
             "id": temp[temp.length - 1].id + 1,
