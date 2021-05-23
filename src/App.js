@@ -109,9 +109,10 @@ function App() {
             </div>
         })}
         
-        </div> : 
+         : 
         <div>loading...</div> 
         }
+        </div>
 
         <button onClick={(e)=> { setStatus(VIEW.SHOWALL); handleButtonClick(e); } }>All</button>
         <button onClick={(e)=> { setStatus(VIEW.SHOWACTIVE); handleButtonClick(e); } }>Active</button>
