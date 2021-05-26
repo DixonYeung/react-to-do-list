@@ -1,7 +1,8 @@
 # Simple to do list web app
+*Created without following any tutorial*
 
-Already deployed IPFS web app on FLEEK:
-https://dizzonwebapp-todolist.on.fleek.co/
+Already deployed web app on Netlify:
+https://dizzon-todolist.netlify.app/
 
 
 ### Want to run the app in your own computer?
