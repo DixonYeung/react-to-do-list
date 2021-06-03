@@ -21,7 +21,7 @@ function App() {
             setRecordList(JSON.parse(localStorage.getItem('todolist_record')));
         }
         else{
-            Axios.get("https://dizzon-webapp-server.herokuapp.com/api/todolist").then((response) => {
+            Axios.get("https://dizzon.herokuapp.com/api/todolist").then((response) => {
                 if (response.data.length > 0) {
                     let temp = [];
                     response.data.map((r, i) => {
